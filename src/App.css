@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(232, 232, 232);
+}
+canvas {
+  background: linear-gradient(0deg, rgba(157,157,157,1) 0%, rgb(216, 216, 216) 100%);
+}
+
+.Card {
+  background-color: rgb(242, 242, 242);
+  width: 30%;
+  height: 100%;
+}
