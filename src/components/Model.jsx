@@ -10,8 +10,8 @@ export function Model(props) {
                 receiveShadow
                 geometry={nodes.Cylinder.geometry}
                 material={materials.cardboard}
-                position={[0, 0.04, 0]}
-                scale={0.03}
+                position={[0, 0, 0]}
+                scale={1}
             />
         </group>
     );
