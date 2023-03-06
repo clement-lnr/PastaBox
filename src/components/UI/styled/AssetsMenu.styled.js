@@ -1,4 +1,6 @@
-.AssetsMenu {
+import styled from 'styled-components';
+
+export const Container = styled.div `
     right: 0;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.5);
@@ -6,56 +8,61 @@
     border-left: 1px solid rgba(255, 255, 255, 0.18);
     width: 345px;
     height: 100%;
-}
+`;
 
-.MenuTop {
+export const TopContainer = styled.div `
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 75px;
-}
-.MenuTop h1 {
+`;
+
+export const TopContainerH1 = styled.h1 `
     position: relative;
     width: 150px;
-}
-.MenuTop .CloseButton {
+`;
+
+export const CloseButtonContainer = styled.div `
     position: relative;
     width: 150px;
     height: 50px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-.MenuTop button {
+`;
+
+export const CloseButton = styled.button `
     width: 35px;
     height: 35px;
     position: relative;
     border-radius: 20px;
     border: none;
     cursor: pointer;
-}
-.MenuTop button img {
+`;
+
+export const CloseButtonImg = styled.img `
     width: 35px;
     height: 35px;
-}
-  
-.CardsContainer {
+`;
+
+export const CardsContainer = styled.div `
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-}
+`;
 
-.MenuBottom {
+export const BottomContainer = styled.div `
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: 75px;
     justify-content: space-around;
     align-items: center;
-}
-.MenuBottom button {
+`;
+
+export const BottomContainerButton = styled.button `
     position: relative;
     width: 125px;
     height: 40px;
@@ -65,7 +72,7 @@
     font-size: 18px;
     border: none;
     cursor: pointer;
-}
-.MenuBottom button:hover {
-    background-color: rgb(20, 122, 255);
-}
+    &:hover {
+        background-color: rgb(20, 122, 255);
+    }
+`;

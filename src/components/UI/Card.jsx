@@ -1,10 +1,11 @@
-import './Card.css'
+import { Container } from "./styled/Card.styled.js";
+
 const Card = () => {
     return (
         <>
-            <div className="container">
+            <Container>
 
-            </div>
+            </Container>
         </>
     );
 }

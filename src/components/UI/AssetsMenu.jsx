@@ -1,5 +1,5 @@
 import React from "react";
-import './AssetsMenu.css';
+import { BottomContainer, BottomContainerButton, CardsContainer, CloseButton, CloseButtonContainer, CloseButtonImg, Container, TopContainer, TopContainerH1 } from "./styled/AssetsMenu.styled";
 import Card from './Card';
 
 const AssetsMenu = ({ active, setActive }) => {
@@ -8,23 +8,23 @@ const AssetsMenu = ({ active, setActive }) => {
         <>
             {
                 active && (
-                    <div className='AssetsMenu'>
-                        <div className="MenuTop">
-                            <h1>Assets</h1>
-                            <div className="CloseButton">
-                                <button onClick={ () => { setActive(false)}}>
-                                    <img src='./back.png' />
-                                </button>
-                            </div>
-                        </div>
-                        <div className='CardsContainer'>
+                    <Container>
+                        <TopContainer>
+                            <TopContainerH1>Assets</TopContainerH1>
+                            <CloseButtonContainer>
+                                <CloseButton onClick={ () => { setActive(false)}}>
+                                    <CloseButtonImg src='./back.png' />
+                                </CloseButton>
+                            </CloseButtonContainer>
+                        </TopContainer>
+                        <CardsContainer>
                             <Card/>
                             <Card/>
-                        </div>
-                        <div className="MenuBottom">
-                            <button >importer</button>
-                        </div>
-                    </div>
+                        </CardsContainer>
+                        <BottomContainer>
+                            <BottomContainerButton>importer</BottomContainerButton>
+                        </BottomContainer>
+                    </Container>
                 )
             }
         </>

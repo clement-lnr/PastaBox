@@ -1,0 +1,7 @@
+styled-components
+Dialog: importer un fichier depuis pc
+physique
+show fps
+drag & drop
+dark mode
+Language

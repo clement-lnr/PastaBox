@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { Canvas } from '@react-three/fiber'
-import './App.css';
-import { Model } from './components/Model'
 import { OrbitControls } from '@react-three/drei'
+import './App.css';
+import { AssetsButton, AssetsImg, Container, SettingsButton, SettingsImg } from './App.styled';
+import { Model } from './components/Model'
+import SettingsMenu from './components/UI/SettingsMenu';
 import AssetsMenu from './components/UI/AssetsMenu';
 
 function App() {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openAssetsMenu, setOpenAssetsMenu] = useState(false);
+  const [openSettingsMenu, setOpenSettingsMenu] = useState(false);
 
   return (
-    <div className="App">
+    <Container>
       <Canvas camera={{ position: [3, 3, 4], fov: 75 }}>
         {/* <fog attach="fog" args={['white', 60, 100]} /> */}
         <ambientLight intensity={0.2}/>
@@ -18,18 +21,19 @@ function App() {
         <OrbitControls autoRotate/>
       </Canvas>
 
-      <button className='ParameterMenuBtn'>
-        <img src='./parameter.png'/>
-      </button>
+      <SettingsButton onClick={ () => {setOpenSettingsMenu(true)} }>
+        <SettingsImg src='./parameter.png' alt=''/>
+      </SettingsButton>
 
-      <button className='AssetsMenuBtn' onClick={ () => {setOpenMenu(true)} } >
-        <img src='./PastaBoxIcon60.png' />
-      </button>
+      <AssetsButton onClick={ () => {setOpenAssetsMenu(true)} } >
+        <AssetsImg src='./PastaBoxIcon60.png' alt=''/>
+      </AssetsButton>
 
-      <AssetsMenu active={openMenu} setActive={setOpenMenu}/>
+      <SettingsMenu active={openSettingsMenu} setActive={setOpenSettingsMenu}/>
+      <AssetsMenu active={openAssetsMenu} setActive={setOpenAssetsMenu}/>
 
 
-    </div>
+    </Container>
   );
 }
 
