@@ -1,5 +1,5 @@
 import React from "react";
-import { CloseButton, CloseButtonContainer, CloseButtonImg, Container, TopContainer, TopContainerH1 } from "./styled/SettingsMenu.styled";
+import { CloseButton, CloseButtonContainer, CloseButtonImg, Container, SettingsContainer, TopContainer, TopContainerH1 } from "./styled/SettingsMenu.styled";
 
 const SettingsMenu = ({ active, setActive }) => {
     return (
@@ -15,6 +15,11 @@ const SettingsMenu = ({ active, setActive }) => {
                                 </CloseButton>
                             </CloseButtonContainer>
                         </TopContainer>
+                        <SettingsContainer>
+                            <h2>afficher les fps</h2>
+                            <h2>language</h2>
+                            <h2>mode sombre</h2>
+                        </SettingsContainer>
                     </Container>
                 )
             }

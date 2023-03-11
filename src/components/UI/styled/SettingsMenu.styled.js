@@ -44,3 +44,10 @@ export const CloseButtonImg = styled.img `
     width: 35px;
     height: 35px;
 `;
+
+export const SettingsContainer = styled.div `
+    display: flex;
+    margin: auto;
+    width: 310px;
+    flex-direction: column;
+`;
