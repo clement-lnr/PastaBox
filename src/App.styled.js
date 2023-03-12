@@ -47,3 +47,11 @@ export const AssetsImg = styled.img`
     width: 60px;
     height: 60px;
 `;
+
+export const FPS = styled.div`
+    position: absolute;
+    color: white;
+    top: 15px;
+    left: 100px;
+    cursor: default;
+`;

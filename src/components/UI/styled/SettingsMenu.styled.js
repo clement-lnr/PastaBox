@@ -51,3 +51,26 @@ export const SettingsContainer = styled.div `
     width: 310px;
     flex-direction: column;
 `;
+
+export const Settings = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+`;
+
+export const CheckBox = styled.input`
+    width: 20px;
+    height: 20px;
+    
+    &:checked {
+        background-color: #32a852;
+    }
+    &::after {
+        background-color: #32a852;
+    }
+`;
+
+export const SelectInput = styled.select`
+    height: 20px;
+`;

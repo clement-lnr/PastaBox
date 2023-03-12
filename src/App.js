@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import './App.css';
-import { AssetsButton, AssetsImg, Container, SettingsButton, SettingsImg } from './App.styled';
+import { AssetsButton, AssetsImg, Container, FPS, SettingsButton, SettingsImg } from './App.styled';
 import { Model } from './components/Model'
 import SettingsMenu from './components/UI/SettingsMenu';
 import AssetsMenu from './components/UI/AssetsMenu';
@@ -10,6 +10,13 @@ import AssetsMenu from './components/UI/AssetsMenu';
 function App() {
   const [openAssetsMenu, setOpenAssetsMenu] = useState(false);
   const [openSettingsMenu, setOpenSettingsMenu] = useState(false);
+  const [showFPS, setShowFPS] = useState(false);
+
+  useEffect(() => {
+    const data = window.localStorage.getItem('SHOW_FPS');
+    console.log(data);
+    // setShowFPS(JSON.parse(window.localStorage.getItem));
+  }, [])
 
   return (
     <Container>
@@ -29,7 +36,12 @@ function App() {
         <AssetsImg src='./PastaBoxIcon60.png' alt=''/>
       </AssetsButton>
 
-      <SettingsMenu active={openSettingsMenu} setActive={setOpenSettingsMenu}/>
+      {
+        showFPS &&(
+          <FPS>FPS: 60<br/>CPU: 80%<br/>RAM: 40%</FPS>
+        )
+      }
+      <SettingsMenu active={openSettingsMenu} setActive={setOpenSettingsMenu} FPS={showFPS} setFPS={setShowFPS}/>
       <AssetsMenu active={openAssetsMenu} setActive={setOpenAssetsMenu}/>
 
 
